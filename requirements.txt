@@ -1,0 +1,25 @@
+# Forecasting
+prophet>=1.1.5
+pandas>=2.0.0
+numpy>=1.24.0
+
+# LLM (openai SDK pointed at DeepSeek)
+openai>=1.0.0
+
+# Fuzzy matching for recurring payment detection
+rapidfuzz>=3.0.0
+scikit-learn>=1.3.0
+
+# Telegram bot
+python-telegram-bot>=20.0
+
+# Web dashboard
+streamlit>=1.30.0
+plotly>=5.18.0
+
+# Utilities
+python-dotenv>=1.0.0
+python-dateutil>=2.8.0
+loguru>=0.7.0
+click>=8.1.0
+rich>=13.0.0
