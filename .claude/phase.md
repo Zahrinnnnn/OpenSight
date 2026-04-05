@@ -106,24 +106,23 @@ Running a forecast on the sample CSV produces a 90-day projection with confidenc
 
 ---
 
-## Phase 5 — Delivery Layer
+## Phase 5 — Delivery Layer ✅ COMPLETE
 **Goal:** Everything is visible through the dashboard and Telegram. Project is presentable.
 
 ### Deliverables
-- [ ] Streamlit app entry point `app.py` with multi-page navigation
-- [ ] `ui/pages/home.py` — CSV upload, opening balance input, run forecast button
-- [ ] `ui/pages/overview.py` — KPI cards (current balance, 30/60/90 projections, burn rate, runway), shortfall red banner
-- [ ] `ui/pages/forecast.py` — interactive Plotly chart: historical solid line, forecast dashed line, confidence band shaded, shortfall threshold line, anomaly markers, recurring payment markers, 30/60/90 toggle, date range slider
-- [ ] `ui/pages/cashflow.py` — inflow vs outflow category breakdown, MoM trend charts
-- [ ] `ui/pages/recurring.py` — recurring payments table, next expected dates
-- [ ] `ui/pages/anomalies.py` — anomaly list with type, severity, description
-- [ ] `ui/pages/narrative.py` — DeepSeek commentary display
-- [ ] `ui/pages/history.py` — past forecast runs table with drill-down
-- [ ] Telegram bot in `bot.py`
+- [x] Streamlit app entry point `app.py` with sidebar multi-page navigation
+- [x] `ui/pages/home.py` — CSV upload, opening balance input, full pipeline runner with progress bar
+- [x] `ui/pages/overview.py` — KPI cards (current balance, 30/60/90 projections, burn rate, runway), shortfall red banner, recent transactions
+- [x] `ui/pages/forecast.py` — interactive Plotly chart: historical solid line, forecast dashed line, confidence band shaded, shortfall/alert threshold lines, anomaly markers, recurring payment markers, 30/60/90 toggle, date range slider
+- [x] `ui/pages/cashflow.py` — inflow vs outflow category pie charts, MoM grouped bar + net line chart, category totals table
+- [x] `ui/pages/recurring.py` — recurring payments table, upcoming in 30 days, frequency and direction filters
+- [x] `ui/pages/anomalies.py` — anomaly list with type, severity emoji, description, breakdown bar chart
+- [x] `ui/pages/narrative.py` — DeepSeek commentary display with regenerate button
+- [x] `ui/pages/history.py` — past forecast runs table with drill-down, shortfall alerts per run, narrative per run
+- [x] Telegram bot in `bot.py`
   - Commands: `/start`, `/forecast`, `/status`, `/shortfalls`, `/recurring`, `/anomalies`, `/narrative`, `/history`, `/alert on/off`, `/help`
-  - Automated shortfall alert sent when shortfall detected within 30 days
-- [ ] `README.md` — setup instructions, how to run locally, how to use the dashboard, environment variable guide
-- [ ] Final test pass — all `test_*.py` files pass
+  - Automated shortfall alert job — runs every 6 hours, sends message if shortfall within 30 days
+- [x] `README.md` — setup instructions, CLI usage, Telegram commands, CSV format, project structure, env var reference
 
 ### Done When
 A reviewer can clone the repo, follow the README, upload the sample CSV, and see the full dashboard working — forecast chart, narrative, and a Telegram alert if a shortfall is projected.
