@@ -54,24 +54,24 @@ Any CSV that passes validation is fully cleaned, categorised, deduplicated, and 
 
 ---
 
-## Phase 3 — Analysis Engine
+## Phase 3 — Analysis Engine ✅ COMPLETE
 **Goal:** Recurring payments and anomalies are detected and stored.
 
 ### Deliverables
-- [ ] Recurring payment detector in `src/analysis/recurring.py`
+- [x] Recurring payment detector in `src/analysis/recurring.py`
   - Group transactions by description similarity using `rapidfuzz`
   - Detect monthly fixed, monthly variable, weekly, quarterly patterns
   - Compute `next_expected` date and `confidence` score
   - Store detected patterns in `recurring_payments` table
-- [ ] Anomaly detector in `src/analysis/anomaly.py`
+- [x] Anomaly detector in `src/analysis/anomaly.py`
   - IQR-based outlier detection per category
   - Flag: LARGE_AMOUNT, UNUSUAL_TIMING, NEW_COUNTERPARTY, SPIKE, GAP
   - Store flagged rows in `anomalies` table, link to `transaction_id`
-- [ ] Seasonality notes in `src/analysis/seasonality.py`
+- [x] Seasonality notes in `src/analysis/seasonality.py`
   - Month-end spike detection (payroll, rent, utilities)
   - Quarter-end pattern flags
-  - These feed into Prophet as custom regressors (next phase)
-- [ ] `test_analysis.py` — tests for recurring detector and anomaly detector using fixture data
+  - `build_month_end_regressor()` feeds into Prophet as custom regressor (Phase 4)
+- [x] `test_analysis.py` — 30 tests covering recurring detector, anomaly detector, seasonality
 
 ### Done When
 After processing the sample CSV, recurring payments are detected with the correct frequency, and known anomalies in the fixture data are flagged correctly.

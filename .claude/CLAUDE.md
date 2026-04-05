@@ -16,7 +16,7 @@ OpenSight is an intelligent cash flow forecasting engine built in Python. It ing
 |---|---|---|
 | 1 | Foundation — git, structure, SQLite, cleaner, CLI | ✅ Complete |
 | 2 | Data Processing — categoriser, aggregator, sample data | ✅ Complete |
-| 3 | Analysis Engine — recurring detector, anomaly detector | ⬜ Not started |
+| 3 | Analysis Engine — recurring detector, anomaly detector | ✅ Complete |
 | 4 | Forecasting + Explanation — Prophet, shortfall, DeepSeek | ⬜ Not started |
 | 5 | Delivery — Streamlit dashboard, Telegram bot, README | ⬜ Not started |
 

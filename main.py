@@ -12,6 +12,9 @@ from src.processing.cleaner import clean_transactions, flag_suspicious_rows
 from src.processing.categoriser import categorise_transactions
 from src.processing.aggregator import aggregate_daily
 from src.database.connection import init_db, get_connection
+from src.analysis.recurring import detect_recurring_payments, save_recurring_payments
+from src.analysis.anomaly import detect_anomalies, save_anomalies
+from src.analysis.seasonality import get_seasonality_summary
 
 console = Console()
 
@@ -119,7 +122,49 @@ def run(csv_path: str, opening_balance: float, log_level: str):
     daily_df = aggregate_daily(clean_df)
     console.print(f"[dim]  Daily aggregation ready — {len(daily_df)} calendar days[/dim]")
 
-    # 5. Summary table
+    # 7. Load stored transactions with IDs for analysis
+    conn = get_connection()
+    import pandas as pd
+    stored_df = pd.read_sql_query("SELECT * FROM transactions", conn)
+    conn.close()
+
+    # 8. Recurring payment detection
+    console.print("[dim]Detecting recurring payments...[/dim]")
+    recurring = detect_recurring_payments(stored_df)
+    save_recurring_payments(recurring)
+    console.print(f"[green]  {len(recurring)} recurring payment patterns detected[/green]")
+
+    # Mark recurring transactions in the database
+    if recurring:
+        conn = get_connection()
+        cursor = conn.cursor()
+        for payment in recurring:
+            cursor.execute(
+                "UPDATE transactions SET is_recurring = 1 WHERE description LIKE ?",
+                (f"%{payment.description[:20]}%",),
+            )
+        conn.commit()
+        conn.close()
+
+    # 9. Anomaly detection
+    console.print("[dim]Running anomaly detection...[/dim]")
+    anomalies = detect_anomalies(stored_df)
+    save_anomalies(anomalies, stored_df)
+    high = sum(1 for a in anomalies if a.severity == "HIGH")
+    console.print(
+        f"[green]  {len(anomalies)} anomalies flagged[/green]"
+        + (f" [red]({high} high severity)[/red]" if high else "")
+    )
+
+    # 10. Seasonality summary
+    seasonality = get_seasonality_summary(stored_df)
+    if seasonality["month_end_spike_categories"]:
+        console.print(
+            f"[dim]  Month-end spikes in: "
+            f"{', '.join(seasonality['month_end_spike_categories'])}[/dim]"
+        )
+
+    # 12. Summary table
     inflows  = clean_df[clean_df["type"] == "inflow"]["amount"].sum()
     outflows = clean_df[clean_df["type"] == "outflow"]["amount"].sum()
     net      = inflows - outflows
@@ -134,10 +179,12 @@ def run(csv_path: str, opening_balance: float, log_level: str):
     table.add_row("Total outflows",    f"RM {outflows:,.2f}")
     table.add_row("Net cash flow",     f"RM {net:,.2f}")
     table.add_row("Opening balance",   f"RM {opening_balance:,.2f}")
+    table.add_row("Recurring patterns", str(len(recurring)))
+    table.add_row("Anomalies flagged",  str(len(anomalies)))
 
     console.print("\n")
     console.print(table)
-    console.print("[bold green]Import complete.[/bold green] Run forecasting next with: [dim]python main.py forecast[/dim]\n")
+    console.print("[bold green]Analysis complete.[/bold green] Run forecasting next with: [dim]python main.py forecast[/dim]\n")
 
 
 if __name__ == "__main__":
