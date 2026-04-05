@@ -1,0 +1,170 @@
+date,description,amount,type,category,account
+2025-04-02,Client Payment - Bumi Ria Trading Sdn Bhd,18500.00,inflow,Revenue,CIMB
+2025-04-05,Office Rental April 2025,3500.00,outflow,Rent,CIMB
+2025-04-07,TNB Electric Bill March,420.50,outflow,Utilities,CIMB
+2025-04-08,Unifi Business Broadband April,299.00,outflow,Utilities,CIMB
+2025-04-10,Salary Run April - 5 Staff,14200.00,outflow,Payroll,HLB
+2025-04-12,Vendor Payment - Apex Supplies,2300.00,outflow,Cost of Goods,CIMB
+2025-04-15,Client Payment - Nexus Solutions,7800.00,inflow,Revenue,CIMB
+2025-04-17,Prudential Insurance Premium,650.00,outflow,Insurance,HLB
+2025-04-20,LHDN Tax Payment Q1,4200.00,outflow,Tax,CIMB
+2025-04-22,Client Payment - KL Distributors,12000.00,inflow,Revenue,CIMB
+2025-04-25,Office Supplies - Kaison,380.00,outflow,Operating Expense,CIMB
+2025-04-28,CIMB Business Loan Instalment,2100.00,outflow,Loan Repayment,CIMB
+2025-04-30,Client Payment - Bumi Ria Trading Sdn Bhd,9500.00,inflow,Revenue,CIMB
+2025-05-02,Staff Claim Reimbursement,750.00,outflow,Operating Expense,HLB
+2025-05-05,Office Rental May 2025,3500.00,outflow,Rent,CIMB
+2025-05-07,Vendor Payment - Mega Print Sdn Bhd,1100.00,outflow,Cost of Goods,CIMB
+2025-05-09,Client Payment - Horizon Tech,22000.00,inflow,Revenue,CIMB
+2025-05-10,Salary Run May - 5 Staff,14200.00,outflow,Payroll,HLB
+2025-05-12,TNB Electric Bill April,398.00,outflow,Utilities,CIMB
+2025-05-14,Unifi Business Broadband May,299.00,outflow,Utilities,CIMB
+2025-05-16,Client Payment - Nexus Solutions,7800.00,inflow,Revenue,CIMB
+2025-05-19,Refund from Apex Supplies - overcharge,320.00,inflow,Refund,CIMB
+2025-05-21,Vendor Payment - Apex Supplies,2100.00,outflow,Cost of Goods,CIMB
+2025-05-23,Maintenance Service - Aircon,850.00,outflow,Operating Expense,CIMB
+2025-05-26,Client Payment - Stellar Group,15000.00,inflow,Revenue,CIMB
+2025-05-28,CIMB Business Loan Instalment,2100.00,outflow,Loan Repayment,CIMB
+2025-05-30,Prudential Insurance Premium,650.00,outflow,Insurance,HLB
+2025-06-02,Client Payment - Bumi Ria Trading Sdn Bhd,18500.00,inflow,Revenue,CIMB
+2025-06-04,Vendor Payment - Apex Supplies,2500.00,outflow,Cost of Goods,CIMB
+2025-06-05,Office Rental June 2025,3500.00,outflow,Rent,CIMB
+2025-06-09,TNB Electric Bill May,445.00,outflow,Utilities,CIMB
+2025-06-10,Salary Run June - 5 Staff,14200.00,outflow,Payroll,HLB
+2025-06-11,Unifi Business Broadband June,299.00,outflow,Utilities,CIMB
+2025-06-13,Client Payment - KL Distributors,9000.00,inflow,Revenue,CIMB
+2025-06-16,Raya Bonus Payout,7000.00,outflow,Payroll,HLB
+2025-06-18,Client Payment - Nexus Solutions,7800.00,inflow,Revenue,CIMB
+2025-06-20,Office Renovation Works - partial,12000.00,outflow,CAPEX,CIMB
+2025-06-24,Staff Claim Reimbursement,520.00,outflow,Operating Expense,HLB
+2025-06-26,CIMB Business Loan Instalment,2100.00,outflow,Loan Repayment,CIMB
+2025-06-28,Prudential Insurance Premium,650.00,outflow,Insurance,HLB
+2025-06-30,Client Payment - Stellar Group,11000.00,inflow,Revenue,CIMB
+2025-07-02,Client Payment - Horizon Tech,18000.00,inflow,Revenue,CIMB
+2025-07-05,Office Rental July 2025,3500.00,outflow,Rent,CIMB
+2025-07-07,Vendor Payment - Apex Supplies,2300.00,outflow,Cost of Goods,CIMB
+2025-07-09,TNB Electric Bill June,412.00,outflow,Utilities,CIMB
+2025-07-10,Salary Run July - 5 Staff,14200.00,outflow,Payroll,HLB
+2025-07-11,Unifi Business Broadband July,299.00,outflow,Utilities,CIMB
+2025-07-14,Client Payment - Bumi Ria Trading Sdn Bhd,18500.00,inflow,Revenue,CIMB
+2025-07-16,Vendor Payment - Mega Print Sdn Bhd,950.00,outflow,Cost of Goods,CIMB
+2025-07-18,Client Payment - Nexus Solutions,7800.00,inflow,Revenue,CIMB
+2025-07-22,LHDN Tax Payment Q2,4200.00,outflow,Tax,CIMB
+2025-07-24,Office Supplies - Kaison,290.00,outflow,Operating Expense,CIMB
+2025-07-26,CIMB Business Loan Instalment,2100.00,outflow,Loan Repayment,CIMB
+2025-07-28,Prudential Insurance Premium,650.00,outflow,Insurance,HLB
+2025-07-30,Client Payment - KL Distributors,13500.00,inflow,Revenue,CIMB
+2025-08-02,Client Payment - Bumi Ria Trading Sdn Bhd,18500.00,inflow,Revenue,CIMB
+2025-08-04,Vendor Payment - Apex Supplies,2200.00,outflow,Cost of Goods,CIMB
+2025-08-05,Office Rental August 2025,3500.00,outflow,Rent,CIMB
+2025-08-08,TNB Electric Bill July,388.00,outflow,Utilities,CIMB
+2025-08-09,Unifi Business Broadband August,299.00,outflow,Utilities,CIMB
+2025-08-10,Salary Run August - 5 Staff,14200.00,outflow,Payroll,HLB
+2025-08-13,Client Payment - Stellar Group,14000.00,inflow,Revenue,CIMB
+2025-08-18,Staff Claim Reimbursement,680.00,outflow,Operating Expense,HLB
+2025-08-20,Client Payment - Nexus Solutions,7800.00,inflow,Revenue,CIMB
+2025-08-22,Vendor Payment - Apex Supplies,1800.00,outflow,Cost of Goods,CIMB
+2025-08-25,New Equipment Purchase - Laptop x2,8500.00,outflow,CAPEX,CIMB
+2025-08-26,CIMB Business Loan Instalment,2100.00,outflow,Loan Repayment,CIMB
+2025-08-28,Prudential Insurance Premium,650.00,outflow,Insurance,HLB
+2025-08-30,Client Payment - Horizon Tech,20000.00,inflow,Revenue,CIMB
+2025-09-02,Client Payment - Bumi Ria Trading Sdn Bhd,18500.00,inflow,Revenue,CIMB
+2025-09-04,Vendor Payment - Apex Supplies,2400.00,outflow,Cost of Goods,CIMB
+2025-09-05,Office Rental September 2025,3500.00,outflow,Rent,CIMB
+2025-09-08,TNB Electric Bill August,401.00,outflow,Utilities,CIMB
+2025-09-09,Unifi Business Broadband September,299.00,outflow,Utilities,CIMB
+2025-09-10,Salary Run September - 5 Staff,14200.00,outflow,Payroll,HLB
+2025-09-12,Client Payment - KL Distributors,11000.00,inflow,Revenue,CIMB
+2025-09-15,Client Payment - Nexus Solutions,7800.00,inflow,Revenue,CIMB
+2025-09-18,LHDN Tax Payment Q3,4200.00,outflow,Tax,CIMB
+2025-09-22,Vendor Payment - Mega Print Sdn Bhd,1200.00,outflow,Cost of Goods,CIMB
+2025-09-24,Staff Training - External Workshop,1500.00,outflow,Operating Expense,CIMB
+2025-09-26,CIMB Business Loan Instalment,2100.00,outflow,Loan Repayment,CIMB
+2025-09-28,Prudential Insurance Premium,650.00,outflow,Insurance,HLB
+2025-09-30,Client Payment - Stellar Group,16000.00,inflow,Revenue,CIMB
+2025-10-02,Client Payment - Bumi Ria Trading Sdn Bhd,18500.00,inflow,Revenue,CIMB
+2025-10-03,Vendor Payment - Apex Supplies,2600.00,outflow,Cost of Goods,CIMB
+2025-10-05,Office Rental October 2025,3500.00,outflow,Rent,CIMB
+2025-10-07,TNB Electric Bill September,435.00,outflow,Utilities,CIMB
+2025-10-09,Unifi Business Broadband October,299.00,outflow,Utilities,CIMB
+2025-10-10,Salary Run October - 5 Staff,14200.00,outflow,Payroll,HLB
+2025-10-14,Client Payment - Horizon Tech,25000.00,inflow,Revenue,CIMB
+2025-10-16,Client Payment - Nexus Solutions,7800.00,inflow,Revenue,CIMB
+2025-10-20,Office Supplies - Kaison,350.00,outflow,Operating Expense,CIMB
+2025-10-22,Staff Claim Reimbursement,440.00,outflow,Operating Expense,HLB
+2025-10-24,Deepavali Client Gift Hampers,1200.00,outflow,Operating Expense,CIMB
+2025-10-26,CIMB Business Loan Instalment,2100.00,outflow,Loan Repayment,CIMB
+2025-10-28,Prudential Insurance Premium,650.00,outflow,Insurance,HLB
+2025-10-30,Client Payment - KL Distributors,14000.00,inflow,Revenue,CIMB
+2025-11-03,Client Payment - Bumi Ria Trading Sdn Bhd,18500.00,inflow,Revenue,CIMB
+2025-11-05,Office Rental November 2025,3500.00,outflow,Rent,CIMB
+2025-11-06,Vendor Payment - Apex Supplies,2300.00,outflow,Cost of Goods,CIMB
+2025-11-10,TNB Electric Bill October,415.00,outflow,Utilities,CIMB
+2025-11-10,Salary Run November - 5 Staff,14200.00,outflow,Payroll,HLB
+2025-11-11,Unifi Business Broadband November,299.00,outflow,Utilities,CIMB
+2025-11-14,Client Payment - Nexus Solutions,7800.00,inflow,Revenue,CIMB
+2025-11-17,Client Payment - Stellar Group,19000.00,inflow,Revenue,CIMB
+2025-11-20,LHDN Tax Payment Q4,4200.00,outflow,Tax,CIMB
+2025-11-22,Vendor Payment - Mega Print Sdn Bhd,1050.00,outflow,Cost of Goods,CIMB
+2025-11-24,Year-end Audit Fee - External Auditor,3500.00,outflow,Operating Expense,CIMB
+2025-11-26,CIMB Business Loan Instalment,2100.00,outflow,Loan Repayment,CIMB
+2025-11-28,Prudential Insurance Premium,650.00,outflow,Insurance,HLB
+2025-11-30,Client Payment - Horizon Tech,22000.00,inflow,Revenue,CIMB
+2025-12-02,Client Payment - Bumi Ria Trading Sdn Bhd,18500.00,inflow,Revenue,CIMB
+2025-12-05,Office Rental December 2025,3500.00,outflow,Rent,CIMB
+2025-12-05,Vendor Payment - Apex Supplies,2800.00,outflow,Cost of Goods,CIMB
+2025-12-08,TNB Electric Bill November,428.00,outflow,Utilities,CIMB
+2025-12-08,Unifi Business Broadband December,299.00,outflow,Utilities,CIMB
+2025-12-10,Salary Run December - 5 Staff,14200.00,outflow,Payroll,HLB
+2025-12-12,Christmas Bonus Payout,8000.00,outflow,Payroll,HLB
+2025-12-15,Client Payment - KL Distributors,16000.00,inflow,Revenue,CIMB
+2025-12-16,Client Payment - Nexus Solutions,7800.00,inflow,Revenue,CIMB
+2025-12-18,Staff Year-end Dinner,2200.00,outflow,Operating Expense,CIMB
+2025-12-20,Office Renovation Works - final payment,6000.00,outflow,CAPEX,CIMB
+2025-12-22,Client Payment - Stellar Group,21000.00,inflow,Revenue,CIMB
+2025-12-26,CIMB Business Loan Instalment,2100.00,outflow,Loan Repayment,CIMB
+2025-12-28,Prudential Insurance Premium,650.00,outflow,Insurance,HLB
+2025-12-30,New Year Advance Client Payment - Bumi Ria,5000.00,inflow,Revenue,CIMB
+2026-01-02,Client Payment - Bumi Ria Trading Sdn Bhd,18500.00,inflow,Revenue,CIMB
+2026-01-05,Office Rental January 2026,3500.00,outflow,Rent,CIMB
+2026-01-07,Vendor Payment - Apex Supplies,2400.00,outflow,Cost of Goods,CIMB
+2026-01-08,TNB Electric Bill December,455.00,outflow,Utilities,CIMB
+2026-01-09,Unifi Business Broadband January,299.00,outflow,Utilities,CIMB
+2026-01-10,Salary Run January - 5 Staff,14200.00,outflow,Payroll,HLB
+2026-01-13,Client Payment - Horizon Tech,20000.00,inflow,Revenue,CIMB
+2026-01-15,Client Payment - Nexus Solutions,7800.00,inflow,Revenue,CIMB
+2026-01-20,Office Supplies - Kaison,310.00,outflow,Operating Expense,CIMB
+2026-01-22,Staff Claim Reimbursement,580.00,outflow,Operating Expense,HLB
+2026-01-24,Vendor Payment - Mega Print Sdn Bhd,900.00,outflow,Cost of Goods,CIMB
+2026-01-26,CIMB Business Loan Instalment,2100.00,outflow,Loan Repayment,CIMB
+2026-01-28,Prudential Insurance Premium,650.00,outflow,Insurance,HLB
+2026-01-30,Client Payment - KL Distributors,12000.00,inflow,Revenue,CIMB
+2026-02-03,Client Payment - Bumi Ria Trading Sdn Bhd,18500.00,inflow,Revenue,CIMB
+2026-02-05,Office Rental February 2026,3500.00,outflow,Rent,CIMB
+2026-02-07,Vendor Payment - Apex Supplies,2200.00,outflow,Cost of Goods,CIMB
+2026-02-09,TNB Electric Bill January,395.00,outflow,Utilities,CIMB
+2026-02-09,Unifi Business Broadband February,299.00,outflow,Utilities,CIMB
+2026-02-10,Salary Run February - 5 Staff,14200.00,outflow,Payroll,HLB
+2026-02-14,Client Payment - Stellar Group,17000.00,inflow,Revenue,CIMB
+2026-02-16,Client Payment - Nexus Solutions,7800.00,inflow,Revenue,CIMB
+2026-02-18,CNY Client Gifts,800.00,outflow,Operating Expense,CIMB
+2026-02-22,Vendor Payment - Mega Print Sdn Bhd,1150.00,outflow,Cost of Goods,CIMB
+2026-02-24,LHDN Tax Payment Q1 2026,4200.00,outflow,Tax,CIMB
+2026-02-26,CIMB Business Loan Instalment,2100.00,outflow,Loan Repayment,CIMB
+2026-02-28,Prudential Insurance Premium,650.00,outflow,Insurance,HLB
+2026-03-02,Client Payment - Bumi Ria Trading Sdn Bhd,18500.00,inflow,Revenue,CIMB
+2026-03-04,Vendor Payment - Apex Supplies,2600.00,outflow,Cost of Goods,CIMB
+2026-03-05,Office Rental March 2026,3500.00,outflow,Rent,CIMB
+2026-03-07,TNB Electric Bill February,382.00,outflow,Utilities,CIMB
+2026-03-09,Unifi Business Broadband March,299.00,outflow,Utilities,CIMB
+2026-03-10,Salary Run March - 5 Staff,14200.00,outflow,Payroll,HLB
+2026-03-12,Client Payment - Horizon Tech,24000.00,inflow,Revenue,CIMB
+2026-03-16,Client Payment - Nexus Solutions,7800.00,inflow,Revenue,CIMB
+2026-03-18,Staff Claim Reimbursement,490.00,outflow,Operating Expense,HLB
+2026-03-20,Client Payment - KL Distributors,10500.00,inflow,Revenue,CIMB
+2026-03-22,Vendor Payment - Mega Print Sdn Bhd,1100.00,outflow,Cost of Goods,CIMB
+2026-03-24,Office Supplies - Kaison,270.00,outflow,Operating Expense,CIMB
+2026-03-26,CIMB Business Loan Instalment,2100.00,outflow,Loan Repayment,CIMB
+2026-03-27,Prudential Insurance Premium,650.00,outflow,Insurance,HLB
+2026-03-30,Client Payment - Stellar Group,15000.00,inflow,Revenue,CIMB
+2026-04-02,Client Payment - Bumi Ria Trading Sdn Bhd,18500.00,inflow,Revenue,CIMB

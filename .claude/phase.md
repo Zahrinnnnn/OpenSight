@@ -29,25 +29,25 @@ Running `python main.py data/sample.csv` loads, cleans, and stores transactions 
 
 ---
 
-## Phase 2 — Data Processing
+## Phase 2 — Data Processing ✅ COMPLETE
 **Goal:** Every transaction has a category. Data is ready for the model.
 
 ### Deliverables
-- [ ] Rule-based categoriser in `src/processing/categoriser.py`
+- [x] Rule-based categoriser in `src/processing/categoriser.py`
   - Keyword matching for all 9 categories (Payroll, Rent, Utilities, Tax, Loan Repayment, Insurance, Dividend, Refund, Transfer)
   - Case-insensitive, handles Malay and English keywords
-- [ ] DeepSeek fallback categoriser
+- [x] DeepSeek fallback categoriser
   - Calls DeepSeek API for descriptions that don't match any rule
   - Uses the `CATEGORISE_PROMPT` from PRD section 5.2
   - Respects rate limits, handles API errors gracefully
-- [ ] Daily aggregator in `src/processing/aggregator.py`
+- [x] Daily aggregator in `src/processing/aggregator.py`
   - Groups transactions by date, calculates net cash flow per day
   - Fills missing days with zero
   - Outputs Prophet-compatible `ds`/`y` dataframe
-- [ ] Malaysian public holidays helper in `src/utils/holidays.py`
-- [ ] Duplicate prevention — re-uploading same CSV does not insert duplicate rows
-- [ ] `sample_transactions.csv` in `tests/fixtures/` — 12 months, ~200 rows, realistic Malaysian SME data
-- [ ] `test_processing.py` — tests for cleaner, categoriser, aggregator
+- [x] Malaysian public holidays helper in `src/utils/holidays.py`
+- [x] Duplicate prevention — re-uploading same CSV does not insert duplicate rows
+- [x] `sample_transactions.csv` in `tests/fixtures/` — 12 months, ~175 rows, realistic Malaysian SME data
+- [x] `test_processing.py` — tests for cleaner, categoriser, aggregator
 
 ### Done When
 Any CSV that passes validation is fully cleaned, categorised, deduplicated, and stored. Daily aggregated dataframe is ready for Prophet.

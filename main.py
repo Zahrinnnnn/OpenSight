@@ -9,6 +9,8 @@ load_dotenv()
 from src.utils.logger import logger
 from src.utils.validators import load_and_validate_csv, ValidationError
 from src.processing.cleaner import clean_transactions, flag_suspicious_rows
+from src.processing.categoriser import categorise_transactions
+from src.processing.aggregator import aggregate_daily
 from src.database.connection import init_db, get_connection
 
 console = Console()
@@ -101,10 +103,21 @@ def run(csv_path: str, opening_balance: float, log_level: str):
     if suspicious > 0:
         console.print(f"[yellow]  {suspicious} rows flagged as suspicious — review recommended[/yellow]")
 
-    # 4. Store in database
+    # 4. Categorise
+    console.print("[dim]Categorising transactions...[/dim]")
+    clean_df = categorise_transactions(clean_df, use_deepseek=True)
+    uncategorised = (clean_df["category"] == "Other").sum()
+    if uncategorised > 0:
+        console.print(f"[yellow]  {uncategorised} transactions categorised as Other[/yellow]")
+
+    # 5. Store in database
     console.print("[dim]Storing in database...[/dim]")
     inserted = store_transactions(clean_df, source_file=csv_path)
     console.print(f"[green]  {inserted} new transactions stored[/green]")
+
+    # 6. Aggregate to daily for forecasting
+    daily_df = aggregate_daily(clean_df)
+    console.print(f"[dim]  Daily aggregation ready — {len(daily_df)} calendar days[/dim]")
 
     # 5. Summary table
     inflows  = clean_df[clean_df["type"] == "inflow"]["amount"].sum()
@@ -124,7 +137,7 @@ def run(csv_path: str, opening_balance: float, log_level: str):
 
     console.print("\n")
     console.print(table)
-    console.print("[bold green]Phase 1 complete.[/bold green] Run forecasting next with: [dim]python main.py forecast[/dim]\n")
+    console.print("[bold green]Import complete.[/bold green] Run forecasting next with: [dim]python main.py forecast[/dim]\n")
 
 
 if __name__ == "__main__":
