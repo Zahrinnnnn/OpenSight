@@ -78,26 +78,28 @@ After processing the sample CSV, recurring payments are detected with the correc
 
 ---
 
-## Phase 4 — Forecasting + Explanation
+## Phase 4 — Forecasting + Explanation ✅ COMPLETE
 **Goal:** 90-day forecast is generated, explained in plain language, shortfalls are detected.
 
 ### Deliverables
-- [ ] Prophet model in `src/forecasting/prophet_model.py`
+- [x] Prophet model in `src/forecasting/prophet_model.py`
   - Config: multiplicative seasonality, yearly + weekly, `changepoint_prior_scale=0.05`, `interval_width=0.80`
   - Malaysian public holidays added via `add_country_holidays('MY')`
   - Month-end regressor added
   - Model saved to `data/models/` after training
-- [ ] Forecast generator — 30/60/90 day horizon, returns `ds`, `yhat`, `yhat_lower`, `yhat_upper`
-- [ ] Cash position calculator in `src/forecasting/shortfall.py`
+- [x] Forecast generator — 30/60/90 day horizon, returns `ds`, `yhat`, `yhat_lower`, `yhat_upper`
+- [x] Cash position calculator in `src/forecasting/shortfall.py`
   - Cumulative cash position from opening balance
   - Best case, base case, worst case
-- [ ] Shortfall detector — finds dates where projected balance crosses threshold, stores in `shortfall_alerts`
-- [ ] Forecast run stored in `forecast_runs` table with all summary fields
-- [ ] DeepSeek explanation in `src/explanation/deepseek.py`
+- [x] Shortfall detector — finds dates where projected balance crosses threshold, stores in `shortfall_alerts`
+- [x] Forecast run stored in `forecast_runs` table with all summary fields
+- [x] DeepSeek explanation in `src/explanation/deepseek.py`
   - Forecast narrative using `FORECAST_NARRATIVE_PROMPT` from PRD section 8.1
   - Shortfall alert message using `SHORTFALL_ALERT_PROMPT` from PRD section 8.2
   - Narrative saved to `forecast_runs.narrative`
-- [ ] `test_forecasting.py` — model trains without error, forecast generates for 90 days, shortfall detection works
+- [x] `src/database/queries.py` — helpers for saving/reading forecast runs, anomalies, recurring, shortfalls
+- [x] `test_forecasting.py` — 25 tests covering model training, forecast generation, cash position, shortfall detection
+- [x] `main.py` refactored into two CLI commands: `ingest` and `forecast`
 
 ### Done When
 Running a forecast on the sample CSV produces a 90-day projection with confidence intervals, a cash position curve, and a DeepSeek-generated narrative paragraph — all stored in SQLite.
