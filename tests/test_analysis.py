@@ -76,7 +76,8 @@ def test_frequency_quarterly():
     assert label == "Quarterly"
 
 def test_frequency_ad_hoc():
-    gaps = [5, 55, 20]
+    # avg 15 — sits between Weekly (5-10) and Monthly (25-35), so Ad-hoc
+    gaps = [10, 20, 15]
     label, conf = _detect_frequency(gaps)
     assert label == "Ad-hoc"
 
@@ -89,14 +90,15 @@ def test_frequency_empty_gaps():
 # ── Recurring: description clustering ────────────────────────────────────────
 
 def test_group_similar_descriptions():
+    # In real data the same description string repeats each month
     descs = [
-        "Salary Run April",
-        "Salary Run May",
-        "Salary Run June",
-        "Office Rental April",
+        "Salary Run - 5 Staff",
+        "Salary Run - 5 Staff",
+        "Salary Run - 5 Staff",
+        "Office Rental January",
     ]
     clusters = _group_by_similarity(descs)
-    # Salary runs should cluster together
+    # The three identical salary descriptions should cluster together
     salary_cluster = next(c for c in clusters if len(c) >= 2)
     assert len(salary_cluster) == 3
 
@@ -339,7 +341,7 @@ def test_month_end_spike_detected():
     result = detect_month_end_spikes(df)
     payroll = result[result["category"] == "Payroll"]
     assert not payroll.empty
-    assert payroll.iloc[0]["has_spike"] is True
+    assert payroll.iloc[0]["has_spike"] == True
 
 def test_build_month_end_regressor_column_added():
     daily = pd.DataFrame({

@@ -70,8 +70,7 @@ def test_train_model_adds_month_end_regressor():
     from prophet import Prophet
     daily = make_daily_df(days=180)
     model = train_forecast_model(daily)
-    regressor_names = [r["name"] for r in model.extra_regressors.values()]
-    assert "month_end" in regressor_names
+    assert "month_end" in model.extra_regressors
 
 
 def test_generate_forecast_columns():

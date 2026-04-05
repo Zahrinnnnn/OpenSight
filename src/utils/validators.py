@@ -67,7 +67,7 @@ def validate_dataframe(df: pd.DataFrame) -> list[str]:
 
     # Check date column can be parsed
     try:
-        pd.to_datetime(df["date"], infer_datetime_format=True, errors="raise")
+        pd.to_datetime(df["date"], errors="raise")
     except Exception:
         # Try a looser check — just see how many fail
         failed = pd.to_datetime(df["date"], errors="coerce").isna().sum()

@@ -190,7 +190,7 @@ def ingest(csv_path: str, opening_balance: float, no_deepseek: bool):
     table.add_column("Value", justify="right")
 
     table.add_row("Rows loaded",        str(len(clean_df)))
-    table.add_row("Date range",         f"{clean_df['date'].min().date()} → {clean_df['date'].max().date()}")
+    table.add_row("Date range",         f"{clean_df['date'].min().date()} to {clean_df['date'].max().date()}")
     table.add_row("Total inflows",      f"RM {inflows:,.2f}")
     table.add_row("Total outflows",     f"RM {outflows:,.2f}")
     table.add_row("Net cash flow",      f"RM {net:,.2f}")
